@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# Author：Xuhong Wen
+
+import os
+import sys
+improt getpass
+#os.system("ipconfig")
+cmd_ipconfig=os.popen("ipconfig").read()
+cmd_python_path=sys.path
+password = getpass.getpass("password:")
+print(cmd_ipconfig,cmd_python_path,password)
