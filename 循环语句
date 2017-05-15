@@ -1,0 +1,7 @@
+循环语句：
+1.i在0-9中循环：   for i in range(10)
+2.当为True时无限循环：
+    while True：
+        print（“让我很惆怅...”）
+3.跳出整个循环：    break
+4.继续循环：    continue
