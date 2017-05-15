@@ -4,9 +4,9 @@
 
 import os
 import sys
-improt getpass
+import getpass
 #os.system("ipconfig")
 cmd_ipconfig=os.popen("ipconfig").read()
-cmd_python_path=sys.path
-password = getpass.getpass("password:")
-print(cmd_ipconfig,cmd_python_path,password)
+#cmd_python_path=sys.path
+#password = getpass.getpass("password:")
+print(cmd_ipconfig)
