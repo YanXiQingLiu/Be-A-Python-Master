@@ -1,7 +1,25 @@
-循环语句：
-1.i在0-9中循环：   for i in range(10)
-2.当为True时无限循环：
-    while True：
-        print（“让我很惆怅...”）
-3.跳出整个循环：    break
-4.继续循环：    continue
+
+标准格式：i在0-9中循环：   for i in range(10)
+
+跳出整个循环：    break
+跳出本次循环，进入下一次循环：    continue
+
+大小循环：
+for i in range(10):    
+   print('--------大',i)
+   for j in range(10):
+        print('小', j)
+        if j> 5:
+            break
+
+
+range----步长参数
+
+for i in range(0,10,2):    #从0到10循环，2代表步长隔离两个跳1个，只打印偶数
+   print('loop2',i)
+   
+for i in range(1,10,2):    #从1到10循环，只打印奇数
+   print('loop1',i)
+   
+   
+   
