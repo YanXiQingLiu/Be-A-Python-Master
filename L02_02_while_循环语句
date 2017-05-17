@@ -1,7 +1,31 @@
 循环语句：
-1.i在0-9中循环：   for i in range(10)
-2.当为True时无限循环：
+
+当为True时无限循环：
     while True：
         print（“让我很惆怅...”）
-3.跳出整个循环：    break
-4.继续循环：    continue
+跳出整个循环：    break
+跳出当前循环，并继续下一个循环：    continue
+
+
+
+猜年龄游戏————任性完
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# Author：Xuhong Wen
+
+age_of_oldby = 56
+count = 0    #计时器
+while count < 3:    # 优化点1，替代True
+    guess_age = int(input("猜几岁 ？"))
+    if guess_age == age_of_oldby :
+        print("你猜对了！")
+        break
+    elif guess_age > age_of_oldby :
+        print("小一点。。。")
+    else:
+        print("大一点。。。")
+    count += 1    #计时器赋值一般最后加
+    if count ==3:
+        continue_confirm = input("还想再试吗？")
+        if continue_confirm != 'n':     ----如果输入非N，，则执行计数器清0,开始继续循环。
+            count = 0
