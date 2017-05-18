@@ -3,6 +3,8 @@
 
    列表切片：
         name = ['Hong','Xu','Wen','Jack',1,2,3,4,99,98,96,95]
+        name = [::2]    #2为步长  列表切片
+        
         name.insert(2,'ChaRu')    #指定位置插入元素
         name.append('LastChaRu')    #末尾加上元素
         name.sort    #排序
