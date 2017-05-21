@@ -21,6 +21,17 @@
         print(name[:6][1:3])
         print(name[:6][1:3][1][2])    #不断切分示例
 
+
+集合：
+        常用语  去重
+        print(list1.intersection(list2))#交集
+        print(list1.union(list2))#并集
+        print(list1.difference(list2))#差集  in list1 but not in list2
+        print(list1.issubset(list2))#子集  返回bool
+        print(list1.issuperset(list2))#父集  返回bool
+        
+        
+        
 模块：
         sys 
         sys.path
