@@ -23,12 +23,25 @@
 
 
 集合：
-        常用语  去重
-        print(list1.intersection(list2))#交集
-        print(list1.union(list2))#并集
-        print(list1.difference(list2))#差集  in list1 but not in list2
+        常用语  集合的无序属性，多用于‘去重’
+        增：t.add('x')#增加一项
+        改：s.update([10,90,77]) #在a中添加参数
+        删除：
+              t.remove('H')   #指定删除集合中的特定元素，可指定。
+              t.pop()     #随机删除集合中的某一个元素，不能指定。
+              t.dicard("")   #删除集合某一元素，但是不会返回报错。
+        查：x in a #判断x是否是a的成员
+           len（s）查看结合s的长度
+           
+        
+        print(list1.intersection(list2))#交集   &
+        print(list1.union(list2))#并集   |
+        print(list1.difference(list2))#差集  in list1 but not in list2   list1 - list2
+        print('---',list1.symmetric_difference(list2))#对称差集  把两个互相都没有的取出来。  list1 ^ list2
+        print('--^--',list1^list2)  #对称差集  把两个互相都没有的取出来。  list1 ^ list2
         print(list1.issubset(list2))#子集  返回bool
         print(list1.issuperset(list2))#父集  返回bool
+        list1.isdisjoint(list2)#两个集合如果有交集则返回true
         
         
         
