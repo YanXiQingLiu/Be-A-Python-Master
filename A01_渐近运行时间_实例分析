@@ -1,5 +1,10 @@
-Θ（n）
+
+1.Θ（n）：
   seq = range(n)
   s = 0
   for x in seq:
       s += x
+
+        camouflaged: 内藏式循环
+        comprehensions:list、set、dic等类型的解析式
+        generator expressions:生成器表达式
