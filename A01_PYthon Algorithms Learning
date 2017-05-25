@@ -1,0 +1,14 @@
+实例代码1：
+count = 10**5
+nums = []
+for i in range(count):
+    nums.append(i)
+    
+nums.reverse()
+
+
+对比代码1，速度较慢：
+count = 10**5
+nums = []
+for i in range(count):
+    nums.insert(0,i)
