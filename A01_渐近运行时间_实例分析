@@ -1,0 +1,5 @@
+Θ（n）
+  seq = range(n)
+  s = 0
+  for x in seq:
+      s += x
