@@ -1,6 +1,8 @@
 # PythonPractice
 About Python Learning
 
+A开头是学习Python Algorithms过程记录
+
 C开头均为学习《Python Cookbook》第三版的记录文件——主要用于记录算法的学习；All from:
             书名： 《Python Cookbook》3rd Edition
             作者： David Beazley, Brian K. Jones
