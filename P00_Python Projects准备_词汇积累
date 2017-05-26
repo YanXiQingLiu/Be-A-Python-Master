@@ -3,24 +3,42 @@
 ------------------------------------------------------------------------------------------------
         词汇                                              解释
 ------------------------------------------------------------------------------------------------
-Application Programming Interfaces,API          应用编程接口
-mutable                                         可变的
-immutable                                       不可变的
+Application Programming Interfaces,API       应用编程接口
+mutable                                      可变的
+immutable                                    不可变的
 
-0bnnn                                           二进制表示方法
-0onnn                                           八进制表示方法
-0xnnn                                           十六进制表示方法
+0bnnn                                        二进制表示方法
+0onnn                                        八进制表示方法
+0xnnn                                        十六进制表示方法
 
-decimal                                         固定精度小数 
-fractions                                       有理分数  
-bool                                            0为False，1为True，int（False）验证
-None                                            一个空对象，函数中常作为默认参数的位置标记或标志位
-&、|、^、~                                       与、或、非、异或  
+decimal                                      固定精度小数 
+fractions                                    有理分数  
+bool                                         0为False，1为True，int（False）验证
+None                                         一个空对象，函数中常作为默认参数的位置标记或标志位
+&、|、^、~                                    与、或、非、异或  
 
-byte                                            字节，immutable（计算机存储的或通过网络传输的原始的位模式）
-bytearray                                       字节数组,mutable（计算机存储的或通过网络传输的原始的位模式）
+byte                                         字节，immutable（计算机存储的或通过网络传输的原始的位模式）
+bytearray                                    字节数组,mutable（计算机存储的或通过网络传输的原始的位模式）
 
-unpacking                                       解包，eg: q,r=(5,2);q=5;r=2        
+unpacking                                    解包，eg: q,r=(5,2);q=5;r=2        
+
+set                                          集  
+collection                                   集合         
+frozenset                                    冻结的集合（可作为一个普通集的元素）
+<=,<                                         子集(issubet)
+>=,>                                         超集(issuperset)
+|,&                                          并集（union）、交集(intersection)
+-,^                                          差集(difference)、对称差集(symmetric_difference)
+
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
+decimal                                               
 decimal                                               
 decimal                                               
 decimal                                               
