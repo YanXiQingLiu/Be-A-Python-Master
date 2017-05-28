@@ -65,3 +65,4 @@
         encode编码:    '%20'.encode('utf-8')
         
                
+函数：
