@@ -32,7 +32,7 @@
         >>> next(it) # Invokes it.__next__()
         1
         >>> next(it)
-        2
+        2 
         >>> next(it)
         3
         >>> next(it)
