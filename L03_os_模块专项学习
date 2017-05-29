@@ -1,0 +1,26 @@
+import os
+#确定用户
+os.getlogin()
+os.getuid()    # not for windows
+
+
+#读取和修改umask值
+os.umask(0b111111111)
+bin(18)
+os.umask(18)
+
+#查看用户所用的操作系统
+os.name()    #返回:posix/nt/mac/os2/ce/java
+
+#获得环境变量的字典
+os.environ()
+
+#调查进程环境
+os.getpid()    #获取当前进程ID
+os.getppid()
+os.getcwd()    #获取当前工作目录
+os.environ['HOME']    #查询HOME环境变量，如果没有则报错KeyError
+os.environ['test23']='44'    #创建环境变量名"test23",并赋值为字符串“44”
+del(os.environ['test23'])    #删除环境变量"test23"
+
+
