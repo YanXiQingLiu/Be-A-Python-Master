@@ -1,0 +1,12 @@
+import subprocess as sub
+
+sub.call(['ls'])    #not windwos
+sub.call(['ls']),stdout=open('ls.txt','w'))    #not windwos 执行命令并重定向输出到文档中。
+sub.call(['more','ls.txt'])    #not windwos
+
+sub.call('cmd','/c','dir','/b'])     #windows only
+sub.call(['cmd','/c','dir','/b'],stdout=open('ls.txt',w))     #windows only
+sub.call(['cmd','/c','type','ls.txt'])    #windows only  使用type命令打开ls.txt文件
+
+#遍历文件
+for line in open('ls.txt'):pring(line)    #打开文件并逐行打印
