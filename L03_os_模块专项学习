@@ -24,3 +24,13 @@ os.environ['test23']='44'    #创建环境变量名"test23",并赋值为字符�
 del(os.environ['test23'])    #删除环境变量"test23"
 
 
+#获取文件（和设备）的信息--解码文件最新修改时间、解码文件的访问权限信息
+import os
+os.listdir('.')
+os.stat('fileA.txt')    #主要获取st_uid=1001;st_size=257;st_mtime=1388677418;(用户ID、大小、最后的修改日志)
+improt time
+time.localtime(1388677418)
+time.strftime("%Y-%m-%d",time.localtime(1388677418))
+stats=os.stat('fileA.txt')
+stats.st_mode
+bin(stats.st_mode)[-9:]
