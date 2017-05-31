@@ -34,3 +34,39 @@ time.strftime("%Y-%m-%d",time.localtime(1388677418))
 stats=os.stat('fileA.txt')
 stats.st_mode
 bin(stats.st_mode)[-9:]
+
+实操：
+>>> import os
+>>> os.listdir('.')
+>>> stats=os.stat('Oracle')
+>>> import time
+>>> time.strftime("%Y-%m-%d",time.localtime(stats.st_mtime))
+'2017-02-15'
+>>>bin(stats.st_mode)[-9:]
+'111111111'      #通过把它们看成3个3位的组，可以分别看到Owner、Group、World的读/写/执行值。
+                  这个例子中，所有Owner、Group、World所有的三位都设为1（真）。
+                  注意，这些与umask位的意义是直接相反的，不要混淆它们。
+
+《Umask二进制映射表》
+----------------------------------------------------------------------------------------------
+    Umask二进制值                             读，写，执行的值
+----------------------------------------------------------------------------------------------
+  000                                     读=True，   写=True，  执行=True
+  001                                     读=True，   写=True，  执行=False
+  010                                     读=True，   写=False， 执行=True
+  011                                     读=True，   写=False， 执行=Falsee
+  100                                     读=False，  写=True，  执行=True
+  101                                     读=False，  写=True，  执行=False
+  110                                     读=False，  写=False， 执行=True
+  111                                     读=False，  写=False， 执行=False
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
