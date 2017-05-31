@@ -1,16 +1,24 @@
-import os,glob,shutil as sh
+import os,glob,shutil as sh     #同时导入os/glob/shutil模块,并且指定shutil别名为sh
 os.listdir('.')    #显示当前文件夹所有文件;everything in the folder
 glob.glob('*')     #显示当前文件夹所有文件;everything in the folder
 glob.glob('*.*')    #files with an extension
 glob.glob('file?.txt')    #查找任意以字符串'file'开头的txt文件；text files starting with 'file'
 glob.glob('*.??')    #查找任意2个字母扩展名的文件;any file with a 2 letter extension
 
-sh.copy('fileA.txt','fileX.txt')
-sh.copy('fileB.txt','subdir/fileY.txt')
-os.listdir('.')
-os.listdir('subdir')
-sh.copytree('subdir','test3')
-os.listdir('.')
-os.listdir('test3')
-sh.rmtree('test2')
-os.listdir('.')
+
+#将源文件fileA.txt复制到相同文件夹中的名为fileX.txt的新文件。
+sh.copy('fileA.txt','fileX.txt')    
+
+#复制源文件fileB.txt，到指定目录subdir的名称为fileY.txt的新文件。shutil.copy()
+sh.copy('fileB.txt','subdir/fileY.txt') 
+
+os.listdir('.')    #在当前文件夹中查看文件列表
+os.listdir('subdir')    #在当subdir文件夹中查看文件列表
+
+ #把subdir目录和它的内容复制到一个进程中创建的新文件夹test3中。（subdir名称=>>test3）
+sh.copytree('subdir','test3')   
+
+os.listdir('.')    #
+os.listdir('test3')    #
+sh.rmtree('test2')    #移除目录'test2'
+os.listdir('.')    #
