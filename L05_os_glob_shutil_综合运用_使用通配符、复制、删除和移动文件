@@ -4,3 +4,13 @@ glob.glob('*')     #显示当前文件夹所有文件;everything in the folder
 glob.glob('*.*')    #files with an extension
 glob.glob('file?.txt')    #查找任意以字符串'file'开头的txt文件；text files starting with 'file'
 glob.glob('*.??')    #查找任意2个字母扩展名的文件;any file with a 2 letter extension
+
+sh.copy('fileA.txt','fileX.txt')
+sh.copy('fileB.txt','subdir/fileY.txt')
+os.listdir('.')
+os.listdir('subdir')
+sh.copytree('subdir','test3')
+os.listdir('.')
+os.listdir('test3')
+sh.rmtree('test2')
+os.listdir('.')
