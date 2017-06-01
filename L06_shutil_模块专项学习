@@ -1,1 +1,10 @@
+import shutil as sh 
 
+
+sh.copy('fileA.txt','fileX.txt')
+sh.copy('fileB.txt','subdir/fileY.txt')
+sh.copytree('subdir','test3')
+sh.rmtree('test2')
+sh.remove('test4/fileY.txt')
+
+sh.copytree('projdir','projbak',ignore=sh.ignore_patterns('*.pyc'))
