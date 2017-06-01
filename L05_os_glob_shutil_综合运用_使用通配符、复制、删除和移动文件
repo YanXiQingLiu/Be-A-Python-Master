@@ -22,3 +22,18 @@ os.listdir('.')    #
 os.listdir('test3')    #
 sh.rmtree('test2')    #移除目录'test2'
 os.listdir('.')    #
+
+
+os.mkdir('test4')       # 创建目录test4
+sh.move('subdir/fileY.txt','test4')    #剪切fileY.txt到文件夹test4中，在文件夹subdir不保留
+os.listdir('test4')    #查看文件夹test4的文件列表
+os.listdir('subdir')    #查看文件夹subdir的文件列表
+
+os.remove('test4/fileY.txt')    #
+os.listdir('test4')    #
+
+#报错，用于说明os.remove()只在文件上工作，如果要移除目录可使用os.rmdir()或shutil.rmtree
+os.removne('test4')  
+sh.retree('test4')    #移除目录'test4'
+sh.retree('test3')    #移除目录'test3'
+os.remove('fileX.txt')    #移除文件'fileX.txt'
