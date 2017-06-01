@@ -26,8 +26,13 @@ def find_files(pattern,base='.'):
 ________________________模块内容___________________________________
 
 
-find_tree.find_files('target.txt','TreeRoot')
 
+
+
+
+
+
+用法：find_tree.find_files('target.txt','TreeRoot')
 
 
 
