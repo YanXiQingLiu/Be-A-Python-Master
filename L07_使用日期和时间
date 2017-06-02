@@ -45,7 +45,7 @@ time.struct_time(tm_year=2017, tm_mon=6, tm_mday=2, tm_hour=12,
 tm_min=14, tm_sec=1, tm_wday=4, tm_yday=153, tm_isdst=0)
 
 --------------------------------------------------------------------------------------------
-#strftime函数的用法
+#strftime函数（字符串格式化函数）的用法----用各种格式打印存储的时间
 >>> t.strftime("The date is: %Y-%m-%d",gmt)
 'The date is: 2017-06-02'
 >>> t.strftime("The date is: %H-%M-%S",gmt)
@@ -61,7 +61,7 @@ tm_min=14, tm_sec=1, tm_wday=4, tm_yday=153, tm_isdst=0)
 >>>
 
 --------------------------------------------------------------------------------------------
-#strptime函数的用法
+#strptime函数的用法----将一个日期字符串转换成日期元组
 >>> dt = t.strptime("Saturday,March 8,2017","%A,%B %d,%Y")    #格式化字符串必须与输入字符串严格匹配，注意空格。
 >>> dt
 time.struct_time(tm_year=2017, tm_mon=3, tm_mday=8,
