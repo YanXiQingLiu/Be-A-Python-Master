@@ -1,7 +1,8 @@
 #最基本的模块是time模块、datetime模块、calendar模块
 #strptime函数（p:parse,代表解析）
 #strftime函数（f:format,代表格式化）
-
+#sleep()函数：它可以将你的程序暂停给定量的描述，例如你正在使用后台进程执行一个任务而这个任务可能需要一些时间。
+             #它在你轮询资源时也很有用，例如等待数据到达的网络连接（可以使用一秒的几分之一）
 
 import time as t
 now=t.time()
