@@ -11,7 +11,7 @@ t.strftime("The date is: %H-%M-%S",gmt)
 t.strftime("It is now %I %M%p",gmt)
 t.strftime("The local time format is : %X",gmt)
 t.strftime("The local date format is : %x",gmt)
-t.asctime(gmt)
+t.asctime(gmt)    #一个用来不管本地设置而使用标准格式打印时间元组的便利函数。
 
 
 
@@ -19,7 +19,7 @@ dt = t.strptime("Saturday,March 8 ,2017","%A, %B %d,%Y")
 dt
 t.strptime("2017-06-02","%Y-%m-%d")
 t.strptime("2017-06-02T15:05:45","%Y-%m-%dT%H:%M:%S")
-t.mktime(dt)
+t.mktime(dt)    #将一个时间元组转换成一种秒表示形式
 
 
 
