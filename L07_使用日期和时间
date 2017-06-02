@@ -11,3 +11,56 @@ t.strftime("The date is: %H-%M-%S",gmt)
 t.strftime("It is now %I %M%p",gmt)
 t.strftime("The local time format is : %X",gmt)
 t.strftime("The local date format is : %x",gmt)
+t.asctime(gmt)
+
+
+
+dt = t.strptime("Saturday,March 8 ,2017","%A, %B %d,%Y")
+dt
+t.strptime("2017-06-02","%Y-%m-%d")
+t.strptime("2017-06-02T15:05:45","%Y-%m-%dT%H:%M:%S")
+t.mktime(dt)
+
+
+
+--------------------------------------------------------------------------------------------
+实际操作：    #我的win7电脑获取的tm_hour字段不准，原因待查明
+>>> import time as t
+>>> now=t.time()
+>>> gmt = t.gmtime(now)
+>>> gmt
+time.struct_time(tm_year=2017, tm_mon=6, 
+tm_mday=2, tm_hour=3, tm_min=36, tm_sec=56, tm_wday=4, 
+tm_yday=153, tm_isdst=0)
+>>> t.strftime("The date is: %Y-%m-%d",gmt)
+'The date is: 2017-06-02'
+>>> t.strftime("The date is: %H-%M-%S",gmt)
+'The date is: 03-36-56'
+>>> t.strftime("It is now %I %M%p",gmt)
+'It is now 03 36AM'
+>>> t.strftime("The local time format is : %X",gmt)
+'The local time format is : 03:36:56'
+>>> t.strftime("The local date format is : %x",gmt)
+'The local date format is : 06/02/17'
+>>> t.asctime(gmt)
+'Fri Jun  2 03:36:56 2017'
+>>>
+
+
+
+>>> dt = t.strptime("Saturday,March 8,2017","%A,%B %d,%Y")    #时间格式一定要匹配得上，包括空格。
+>>> dt
+time.struct_time(tm_year=2017, tm_mon=3, tm_mday=8,
+tm_hour=0, tm_min=0, tm_sec=0, tm_wday=5, tm_yday=67, tm_isdst=-1)
+
+>>> t.strptime("2017-06-02","%Y-%m-%d")
+time.struct_time(tm_year=2017, tm_mon=6, tm_mday=2, 
+tm_hour=0, tm_min=0, tm_sec=0, tm_wday=4, tm_yday=153, tm_isdst=-1)
+
+>>> t.strptime("2017-06-02T15:05:45","%Y-%m-%dT%H:%M:%S")
+time.struct_time(tm_year=2017, tm_mon=6, tm_mday=2, 
+tm_hour=15, tm_min=5, tm_sec=45, tm_wday=4, tm_yday=153, tm_isdst=-1)
+>>>
+>>> t.mktime(dt)
+1488902400.0
+>>>
