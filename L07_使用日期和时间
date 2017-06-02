@@ -1,0 +1,13 @@
+#最基本的模块是time模块、datetime模块、calendar模块
+#strptime函数（p:parse,代表解析）
+#strftime函数（f:format,代表格式化）
+
+
+import time as t
+now=t.time()
+gmt = t.gmtime(now)
+t.strftime("The date is: %Y-%m-%d",gmt)
+t.strftime("The date is: %H-%M-%S",gmt)
+t.strftime("It is now %I %M%p",gmt)
+t.strftime("The local time format is : %X",gmt)
+t.strftime("The local date format is : %x",gmt)
