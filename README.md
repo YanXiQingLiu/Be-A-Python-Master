@@ -4,7 +4,8 @@ About Python Learning
                         A开头是学习Python Algorithms过程记录
 
 
-                        C开头均为学习《Python Cookbook》第三版的记录文件——主要用于记录cookbook的学习
+                        C开头均为学习《Python Cookbook》第三版的记录文件
+                        主要用于记录cookbook的学习
                         
 
 All from:
@@ -30,6 +31,6 @@ All from:
 
 
 
-                        4-P开头均为练习文件——主要用于保存小程序和代码练习；
+                        P开头均为练习文件——主要用于保存小程序和代码练习；
 
 
