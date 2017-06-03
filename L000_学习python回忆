@@ -115,4 +115,4 @@
     >>> F.write(str(l)+'$'+str(d)+'\n')     # Convert and separate with $
     27
     >>> F.close()                           #以上操作，先保存在缓存文件中，执行close()函数之后，才保存在文件中。
-
+  
