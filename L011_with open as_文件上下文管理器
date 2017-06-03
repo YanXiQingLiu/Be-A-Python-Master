@@ -1,0 +1,5 @@
+文件上下文管理器：
+    with open(r'C:\misc\data.txt') as myfile:
+        for line in myfile:
+            #...use line here...
+            print(line)
