@@ -94,3 +94,18 @@
 包：
 
 
+文件：
+    注意：文件数据在脚本中一定是字符串，而写入方法不会自动地替换我们做任何向字符串格式转换的工作。
+
+    >>> F = open('datafiletest.txt','w')    # Create output file
+    >>> X,Y,Z=43,44,45                      # Native Python objects
+    >>> s='spam'                            # Must be strings to store in file
+    >>> d = {'a':1,'b':2}
+    >>> l = [1,2,3]
+    >>> F.write(s+'\n')                     # Terminate lines with \n
+    >>> F.write('%s,%s,%s\n'%(X,Y,Z))       # Convert numbers to strings
+    9
+    >>> F.write(str(l)+'$'+str(d)+'\n')     # Convert and separate with $
+    27
+    >>> F.close()                           #以上操作，先保存在缓存文件中，执行close()函数之后，才保存在文件中。
+
