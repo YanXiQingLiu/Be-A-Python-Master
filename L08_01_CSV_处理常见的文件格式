@@ -11,14 +11,45 @@ csv模块提供了两种机制来读取CSV文件：
         
         说明：模块默认使用Microsoft Excel的csv格式
 ------------------------------------------------------------------------------------------
-#测试文件来源
+#reader对象并不仅限于文件。它也可以把一个字符串列表作为它的输入（见下文实操）。如果使用subprocess在
+ #stdout上产生csv格式数据，这是一个强大的工具。
+
+
+
+
+
+
+
+
+
+
+
+#测试文件来源--Chapter2
 http://www.wrox.com/WileyCDA/WroxTitle/Python-Projects.productCd-111890866X,descCd-DOWNLOAD.html
-        
-        
-        
-        
-        
-        
+
+实际操作：
+C:\Users\Administrator>python "I:\\老男孩项目\\S13Day1\\day2\\22csv.py"
+['ItemID', 'Name', 'Description', 'Owner', 'Borrower', 'DateLent', 'DateReturned']
+['1', 'LawnMower', 'Small Hover mower', 'Fred', 'Joe', '4/1/2012', '4/26/2012']
+['2', 'LawnMower', 'Ride-on mower', 'Mike', 'Anne', '9/5/2012', '1/5/2013']
+['3', 'Bike', 'BMX bike', 'Joe', 'Rob', '7/3/2013', '7/22/2013']
+['4', 'Drill', 'Heavy duty hammer', 'Rob', 'Fred', '11/19/2013', '11/29/2013']
+['5', 'Scarifier', 'Quality, stainless steel', 'Anne', 'Mike', '12/5/2013', '']
+['6', 'Sprinkler', 'Cheap but effective', 'Fred', '', '', '']
+
+
+22csv.py文件内容       
+-----------------------------------------------------------------------------       
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# Author：Xuhong Wen
+import csv
+with open('C:\\Python36\\ToolhireData\\toolhire.csv') as th:
+    toolreader = csv.reader(th)
+    li=list(toolreader)
+    for l in li:
+        print(l)       
+--------------------------------------------------------------------------------        
         
         
         
