@@ -1,0 +1,27 @@
+#struct模块能够构造并解析打包的二进制数据。它是另一个数据转换工具，能够把文件中的字符串解读为二进制数据。
+
+#例如：要生成一个打包的二进制数据文件，用'wb'（写入二进制）模式打开它，
+      并将一个格式化的字符串和几个Python对象传给struct。
+      这里用的格式化字符串是指一个4字节整数、一个包含4个字符的字符串以及一个2位整数的数据包，所有这些都按照
+      高位在前(big-endian)的形式（其他格式代码能够处理补位字节、浮点数等）。
+      
+实操：
+
+存储操作：
+>>> F = open('data.bin','wb')                #以写入二进制模式打开（创建）文件，Open binary output file
+>>> import struct
+>>> data=struct.pack(b'>i4sh',7,b'spam',8)      
+>>> data                                     #生成打包二进制数据，Make packed binary data
+b'\x00\x00\x00\x07spam\x00\x08'#
+>>> F.write(data)                            #写入字节字符串，Write byte string
+10
+>>> F.close()
+
+解析操作：
+>>> F=open('data.bin','rb')
+>>> data = F.read()                           #Get packed binary data
+>>> data
+b'\x00\x00\x00\x07spam\x00\x08'
+>>> values = struct.unpack('>i4sh',data)      #Convert to Python objects
+>>> values
+(7, b'spam', 8)
