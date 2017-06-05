@@ -81,4 +81,98 @@
 ---------------------------------------------------------------------------------	
 
 ·Python类型的层次图：
+    1.Collettions/:
+    
+        Sequences/:
+	
+	    Immutable/:
+	    
+	        string
+		
+		Unicode(2.6)
+		
+		Bytes(3.0)
+		
+		Tuple
+		
+	    Mutable/:
+	    
+	        List
+		
+		Bytearray(3.0)
+				
+	Mappings/:
+	
+	    Dictionary
+	       	
+	Sets/:
+	
+            set
+	    
+	    Frozenset
+	    
+--------------------
+    2.Numbers/:
+    
+        Integers/:
+	
+	    Integer
+	    
+	    Long(2.6)
+	    
+	    Boolean
+	    
+	Float
+	
+	Complex
+	
+	Decimal
+	
+	Fraction
+--------------------
+    3.Callables/:
+    
+        Function
+	
+	Generator
+	
+	Class
+	
+	Method/:
+	
+	    Bound
+	    
+	    Unbound(2.6)
+	    
+--------------------
+    4.Internals/:
+    
+        Type
+	
+	Code
+	
+	Frame
+	
+	Traceback
+	
+--------------------
+   5.Other/:
+    
+        Module
+	
+	Instance
+	
+	File
+	
+	None
+	
+	View(3.0)
+--------------------
+
+
+
+
+
+
+
 
