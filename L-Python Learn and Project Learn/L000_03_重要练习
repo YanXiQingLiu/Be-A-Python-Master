@@ -1,0 +1,18 @@
+>>> 2**16
+65536
+>>> 2/5,2/5.0
+(0.4, 0.4)
+>>> "spam"+"eggs"
+'spameggs'
+>>> S="ham"
+>>> "eggs"+S
+'eggsham'
+>>> S*5
+'hamhamhamhamham'
+>>> S[:0]
+''
+>>> "green %s and %s" %("eggs",S)
+'green eggs and ham'
+>>> "green {0} and {1}" .format("eggs",S)
+'green eggs and ham'
+>>>
