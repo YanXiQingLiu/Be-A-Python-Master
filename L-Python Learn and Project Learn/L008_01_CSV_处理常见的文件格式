@@ -21,7 +21,7 @@ csv模块提供了两种机制来读取CSV文件：
 
 
 
-
+机制一：
 
 
 #测试文件来源--Chapter2
@@ -53,9 +53,63 @@ with open('C:\\Python36\\ToolhireData\\toolhire.csv') as th:
         
         
         
-        
-        
-        
+ 机制二：       
+#返回的是有序字典（人工整理后的格式）：
+
+C:\Users\Administrator>python 22csv-机制2字典.py
+OrderedDict([
+            ('ItemID', '1'), 
+            ('Name', 'LawnMower'),
+            ('Description', 'Small Hover mower'),
+            ('Owner','Fred'),
+            ('Borrower', 'Joe'), 
+            ('DateLent', '4/1/2012'),
+            ('DateReturned', '4/26/2012')])
+OrderedDict([
+            ('ItemID', '2'), 
+            ('Name', 'LawnMower'),
+            ('Description', 'Ride-on mower'), 
+            ('Owner', 'Mike'), 
+            ('Borrower', 'Anne'), 
+            ('DateLent', '9/5/2012'), 
+            ('DateReturned', '1/5/2013')
+            ])
+OrderedDict([
+            ('ItemID', '3'), 
+            ('Name', 'Bike'), 
+            ('Description', 'BMX bike'),
+            ('Owner', 'Joe'),
+            ('Borrower', 'Rob'), 
+            ('DateLent', '7/3/2013'),
+            ('DateReturned', '7/22/2013')
+            ])
+OrderedDict([
+            ('ItemID', '4'), 
+            ('Name', 'Drill'), 
+            ('Description', 'Heavy duty hammer'),
+            ('Owner', 'Rob'), 
+            ('Borrower', 'Fred'),
+            ('DateLent', '11/19/2013'),
+            ('DateReturned', '11/29/2013')
+            ])
+OrderedDict([
+            ('ItemID', '5'), 
+            ('Name', 'Scarifier'),
+            ('Description', 'Quality, stainless steel'), 
+            ('Owner', 'Anne'), 
+            ('Borrower', 'Mike'), 
+            ('DateLent', '12/5/2013'),
+            ('DateReturned', '')
+            ])
+OrderedDict([
+            ('ItemID', '6'), 
+            ('Name', 'Sprinkler'), 
+            ('Description', 'Cheap but effective'),
+            ('Owner', 'Fred'), 
+            ('Borrower', ''), 
+            ('DateLent', ''), 
+            ('DateReturned', '')
+            ])        
         
       
       
