@@ -26,3 +26,11 @@ Config文件的基本结构：
                   包括支持将一个选项中的值插入到另一个选项。
     configparaser模块可以将数据转换成字典格式、或者从字典格式转换成数据，等其他功能。
 ---------------------------------------------------------------------------------------------
+
+#导入模块后，创建了一个对象，对象里面有什么？？如下：
+>>> import configparser as cp
+>>> conf = cp.ConfigParser()
+>>> conf
+<configparser.ConfigParser object at 0x00000000023AAFD0>
+>>> type(conf)
+<class 'configparser.ConfigParser'>
