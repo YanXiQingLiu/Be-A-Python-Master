@@ -1,0 +1,78 @@
+-------------------------------toolhire.ini文件内容---------------------------------------------
+[DEFAULT]
+lending_period = 0
+max_value = 0
+
+[Fred]
+max_value = 200
+
+[Anne]
+lenging_period = 30
+
+------------------------------读取Config文件---------------------------------------------------
+>>> import configparaser as cp
+
+#删除原始的解析器对象并创建一个新的解析器对象
+>>> del(conf)    #get rid of the old one
+>>> conf = cp.ConfigParser()    #create a new one
+
+>>> conf.read('toolhire.ini')
+['toolhire.ini']
+>>> conf.sections()
+['Fred', 'Anne']
+
+#即使DEFAULT部分没有包含在列表中也可以读取DEFAULT值
+>>> conf['DEFAULT']['max_value']
+'0'
+
+#当没有对用户显式声明特定选项时，DEFAULT值就会被使用（例如，即使Anne仅指定了lending_period）-
+#还是会为她返回默认的max_value)。
+>>> conf['Anne']['max_value']
+'0'
+>>> conf['Anne']['lending_period']
+'0'
+>>> conf['Fred']['max_value']
+'200'
+
+
+------------------------------测试对象conf---------------------------------------------------
+>>> type(conf)
+<class 'configparser.ConfigParser'>
+>>> conf
+<configparser.ConfigParser object at 0x000000000258AE10>
+>>> del (conf)
+>>> conf = cp.ConfigParser()    #create a new one
+>>> type(conf)
+<class 'configparser.ConfigParser'>
+>>> conf
+<configparser.ConfigParser object at 0x000000000258ADA0>
+------------------------------研究非常规的行为------------------------------------------------
+
+#访问用户并没有提供的值，会产生典型的字典的KeyError错误。
+>>> conf['Joe']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python36\lib\configparser.py", line 959, in __getitem__
+    raise KeyError(key)
+KeyError: 'Joe'
+
+#读取Anne的可用的选项，发现解析器返回了默认值以及那些显式定义的值
+>>> conf.options('Anne')
+['lenging_period', 'lending_period', 'max_value']
+>>> conf.options('Fred')
+['max_value', 'lending_period']
+
+#options对于DEFAULT部分并不可用，使用defaults（）获取那些选项。
+>>> conf.options('DEFAULT')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python36\lib\configparser.py", line 675, in options
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'DEFAULT'
+
+#使用confparser.defaults（）方法获取那些选项。
+>>> conf.defaults()
+OrderedDict([('lending_period', '0'), ('max_value', '0')])
+
+-------------------------------------------------------------------------------------------
+DEFAULTS的非标准行为是使用configparser是会经历的少数烦恼之一。
