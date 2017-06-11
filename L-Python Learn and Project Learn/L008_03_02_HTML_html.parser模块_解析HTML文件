@@ -43,9 +43,9 @@ if __name__ == '__main__':
     #读取sheet001.htm文件
     htm = open('sheet001.htm').read()  
     #词汇积累tool：工具；Hire：雇佣；Parser：分析器
-    #这个不懂什么意思-------------------------------
+    #实例化这个类：即在内存里面创建一个类对象并赋值给parser、同时作为feed（）函数的返回结果。
     parser = ToolHireParser()  
-    #这个不懂什么意思-------------------------------
+    #调用所继承的类html.parser.HTMLParser里的feed函数
     parser.feed(htm)
     print(parser.dates)
 
