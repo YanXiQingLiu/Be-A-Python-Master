@@ -39,8 +39,13 @@ class ToolHireParser(html.parser.HTMLParser):
                 self.dates.append((self.dateLent, data))
 
 if __name__ == '__main__':
-    htm = open('sheet001.htm').read()
-    parser = ToolHireParser()
+
+    #读取sheet001.htm文件
+    htm = open('sheet001.htm').read()  
+    #词汇积累tool：工具；Hire：雇佣；Parser：分析器
+    #这个不懂什么意思-------------------------------
+    parser = ToolHireParser()  
+    #这个不懂什么意思-------------------------------
     parser.feed(htm)
     print(parser.dates)
 
