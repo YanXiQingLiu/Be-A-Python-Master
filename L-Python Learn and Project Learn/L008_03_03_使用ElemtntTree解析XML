@@ -10,7 +10,11 @@ def parseDates(filename):
     dates = []
     rows = []
     dom = ET.parse(filename)
+    #使用getroot()方法从DOM中获取根节点。
     root = dom.getroot()
+    #使用iter()方法来查找所有的文件，通过*参数指定。
+    
+    #检查节点，如果在它的标签中存在Row,就将这个节点添加到rows列表中。
     for node in dom.iter('*'):
         if 'Row' in node.tag:
            rows.append(node)
