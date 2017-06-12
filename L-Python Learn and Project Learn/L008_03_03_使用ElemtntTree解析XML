@@ -1,8 +1,11 @@
 一、找出XML中日期域
 ---------------------------toolhireET1.py-------------------------------------------------
+#导入ElementTree解析器并将它别名设置为ET
 import xml.etree.ElementTree as ET
+#导入别名为dt的datetime模块。
 import time
 
+#创建parseDates()函数，首先将XML文件解析到一个DOM中。parse()函数接受一个文件名作为参数，而不是一个对象。
 def parseDates(filename):
     dates = []
     rows = []
