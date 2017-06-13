@@ -19,8 +19,11 @@ d3.bulk()
 ----------------------------角色类------------------------------------------------------
 #定义一个类，class是定义类的语法，Role是类名，（object）是新式类的写法，必须这样写。
 class Role(object):
-    #初始化函数，在生成一个角色时要初始化属性就填写这里
+    #初始化方法（或构造方法）__init__,在类被调用时，这个方法（虽然它是函数形式，但在类中就不叫函数了，叫方法）
+    #会自动执行，进行一些初始化的动作，设置一些基本属性。
+    #在生成一个角色时要初始化属性就填写这里
     def __init__(self,name,role,weapon,life_value=100,money=15000):
+        #__init__中的第一个参数self
         self.name = name
         self.role = role
         self.weapon = weapon
@@ -35,7 +38,10 @@ class Role(object):
  
     def buy_gun(self,gun_name):
         print("just bought %s" %gun_name)
- 
-r1 = Role('Alex','police','AK47’) #生成一个角色
-r2 = Role('Jack','terrorist','B22’)  #生成一个角色
+        
+#实例化（初始化一个类，造了一个对象），生成一个角色，存在一个变量上，在内存中长期保存 
+#把一个类变成一个具体对象的过程叫做 实例化 （初始化）
+r1 = Role('Alex','police','AK47')
+    #Role('Alex','police','AK47').got_shot对比,造完就完了
+r2 = Role('Jack','terrorist','B22')  #生成一个角色
 ----------------------------------------------------------------------------------
