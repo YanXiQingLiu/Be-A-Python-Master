@@ -23,7 +23,9 @@ class Role(object):
     #会自动执行，进行一些初始化的动作，设置一些基本属性。
     #在生成一个角色时要初始化属性就填写这里
     def __init__(self,name,role,weapon,life_value=100,money=15000):
-        #__init__中的第一个参数self
+        #__init__构造函数
+        #在实例化时做一些类的初始化的工作。
+        #self用于动态传递内存对象r1、r2等
         self.name = name
         self.role = role
         self.weapon = weapon
@@ -38,10 +40,31 @@ class Role(object):
  
     def buy_gun(self,gun_name):
         print("just bought %s" %gun_name)
-        
+
+print（Role）
 #实例化（初始化一个类，造了一个对象），生成一个角色，存在一个变量上，在内存中长期保存 
 #把一个类变成一个具体对象的过程叫做 实例化 （初始化）
+
+#初始化过程：（
+ #       1.把参数['Alex','police','AK47']传给类：Role('Alex','police','AK47')；
+ #       2.类给开辟一块新内存r1。
+ #       3.然后往里面存name=Alex；role=Police；money=15000）
+ #       4.r1内存内部情况
 r1 = Role('Alex','police','AK47')
     #Role('Alex','police','AK47').got_shot对比,造完就完了
 r2 = Role('Jack','terrorist','B22')  #生成一个角色
+
+----------------------------------------------------------------------------------
+
+-----------------------调用函数过程、类初始化过程理解----------------------------------------------
+调用函数---->>函数执行---->>返回结果
+r1 =Role.__init__()  return x34343234(内存地址) 
+
+类初始化过程：
+r1 = Role('Alex','police','AK47')
+    Role(r1,'Alex','police','AK47')
+        r1.name = 'Alex'
+        r1.role = 'police'
+        r1.weapon = 'AK47'
+
 ----------------------------------------------------------------------------------
