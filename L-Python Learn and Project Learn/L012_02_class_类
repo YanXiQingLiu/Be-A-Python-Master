@@ -63,10 +63,14 @@ r2 = Role('Jack','terrorist','B22')  #生成一个角色
 r1 =Role.__init__()  return x34343234(内存地址) 
 
 二、类初始化过程：
-r1 = Role('Alex','police','AK47')
+  #①
+  r1 = Role('Alex','police','AK47')
     Role(r1,'Alex','police','AK47')
         r1.name = 'Alex'
         r1.role = 'police'
         r1.weapon = 'AK47'
-
+        
+  #②公共函数的调用过程（类里面的函数永远是在类所在的内存里面。区别开实例对象r1的内存）
+    r1.buy_guy()  #把r1传给Role.buy_gun(self)-->>Role.buy_gun(r1)
+        
 ----------------------------------------------------------------------------------
