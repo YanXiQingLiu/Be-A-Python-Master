@@ -1,0 +1,44 @@
+名词理解：
+    实例变量：实例变量存在实例的内存里面
+    类变量：类变量存在类的内存里面
+    
+    静态属性（变量）
+    动态属性（方法）
+    
+    r1、r2叫做Role的实例
+    
+    先找实例本身的变量，然后再找类的变量
+----------------------------角色类------------------------------------------------------
+#定义一个类，class是定义类的语法，Role是类名，（object）是新式类的写法，必须这样写。
+class Role(object):
+    n=123  #类变量
+    def __init__(self,name,role,weapon,life_value=100,money=15000):
+        #__init__构造函数
+        #在实例化时做一些类的初始化的工作。
+        #self用于动态传递内存对象r1、r2等
+        self.name = name   #r1.name=name   实例变量（又叫做静态属性）赋予了实例，其作用域就是实例本身
+        self.role = role
+        self.weapon = weapon
+        self.life_value = life_value
+        self.money = money
+ 
+    def shot(self):  #类的方法，功能（又叫动态属性）
+        print("shooting...")
+ 
+    def got_shot(self):
+        print("ah...,I got shot...")
+ 
+    def buy_gun(self,gun_name):
+        print("just bought %s" %gun_name)
+
+print（Role）
+#实例化（初始化一个类，造了一个对象），生成一个角色，存在一个变量上，在内存中长期保存 
+#把一个类变成一个具体对象的过程叫做 实例化 （初始化）
+
+#初始化过程：
+
+r1 = Role('Alex','police','AK47')
+    #Role('Alex','police','AK47').got_shot对比,造完就完了
+r2 = Role('Jack','terrorist','B22')  #生成一个角色
+
+----------------------------------------------------------------------------------
