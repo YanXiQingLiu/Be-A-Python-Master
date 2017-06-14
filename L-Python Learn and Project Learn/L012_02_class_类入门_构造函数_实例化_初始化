@@ -1,9 +1,10 @@
 创建狗模板Dog，并创建bulk属性，造三只狗d1,d2,d3，并有动作。
-
+一、
 ---------------------------------最简单的类---------------------------------------------
 class Dog:
+    n = 123  #类变量
     def __init__(self,name):
-        self.name = name
+        self.name = name  #实例变量，赋予了实例，其作用域就是实例本身
 
     def bulk(self):
         print('%s: wang wang wang!'% self.name)
@@ -28,7 +29,7 @@ class Role(object):
         #__init__构造函数
         #在实例化时做一些类的初始化的工作。
         #self用于动态传递内存对象r1、r2等
-        self.name = name
+        self.name = name   #实例变量，赋予了实例，其作用域就是实例本身
         self.role = role
         self.weapon = weapon
         self.life_value = life_value
