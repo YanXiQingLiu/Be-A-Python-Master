@@ -41,9 +41,35 @@ loans = [
 ...
 >>> cost(items[2])
 370
+>>> sum(cost(item) for item in items[1:])
+1100
+>>> sum(cost(item) for item in items[1:])/(len(items) - 1)
+183.33333333333334
 
+>>> def owner(item): return item[3]
+...
+>>> for member in members[1:] :
+...     count = 0
+...     for item in items[1:] :
+...      if owner(item) == member[0] :
+...         count +=1
+...     print(member[1],':',count)
+...
+Fred : 2
+Mike : 1
+Joe : 1
+Rob : 1
+Anne : 1
+
+
+>>> def onLoan(loan):return loan[-1] =='None'
+...
+>>> [items[int(loan[1])] for loan in loans if onLoan(loan)]
+[['5', 'Scarifier', 'Tool', '5', '$200', 'Average', '2013-09-14']]
 #使用每个数据部分的第一个条目（索引为0）来存储这部分的字段描述，有两个有用的效果：
         1.任何给定数据部分（三个部分）的每一个 ID 值现在匹配这部分相同行的相对于0 的索引。
           例如，members 数据部分的 Mike 行的 ID 为3，它现在可以通过 members[3] 被访问。
         2.在程序和解析器中把它作为备忘录，我们已经通过访问第一个记录吧数据部分的长度和索引调整为1。
 -------------------------------------------------------------------------------------
+
+
