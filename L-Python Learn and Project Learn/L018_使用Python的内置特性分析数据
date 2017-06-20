@@ -51,7 +51,7 @@ loans = [
 183.33333333333334
 
 #3.谁贡献的物品最多？
->>> def owner(item): return item[3]
+>>> def owner(item): return item[3]   #定义owner()函数，从一个物品记录中抽取ownerID 字段。然后循环所有成员来检查每个成员拥有多少物品。
 ...
 >>> for member in members[1:] :
 ...     count = 0
