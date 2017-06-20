@@ -1,0 +1,64 @@
+
+一、工具函数
+1.count（）[类似range（）]
+    >>> import itertools as it
+    >>> for n in it.count(15,2) :
+    ...     if n<50 : print(n,end=' ')
+    ...     else : break
+    ...
+    15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49
+
+2.repeat()
+    >>> for n in range(7):
+    ...     print(next(it.repeat('yes ')),end='')
+    ...
+    yes yes yes yes yes yes yes 
+    >>> list(it.repeat(6,3))
+    [6, 6, 6]
+
+3.cycle()
+
+    >>> res1 = []
+    >>> res2 = []
+    >>> res3 = []
+    >>> resources = it.cycle([res1,res2,res3])
+    >>> for n in range(30):
+    ...     res = next(resources)
+    ...     res.append(n)
+    ...
+    >>> res1
+    [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    >>> res2
+    [1, 4, 7, 10, 13, 16, 19, 22, 25, 28]
+    >>> res3
+    [2, 5, 8, 11, 14, 17, 20, 23, 26, 29]
+
+
+4.chain()
+
+    >>> items = it.chain([1,2,3],'astring',{'a','set','of','string'})
+    >>> for item in items:
+    ...     print(item)
+    ...
+    1
+    2
+    3
+    a
+    s
+    t
+    r
+    i
+    n
+    g
+    string
+    of
+    a
+    set
+
+5.islice()
+    >>> date = list(range(20))
+    >>> date[3:12:2]
+    [3, 5, 7, 9, 11]
+    >>> for d in it.islice(date,3,12,2):print(d,end=' ')
+    ...
+    3 5 7 9 11 >>>
