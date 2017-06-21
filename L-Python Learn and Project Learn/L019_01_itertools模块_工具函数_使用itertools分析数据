@@ -1,6 +1,8 @@
 
-一、工具函数
+一、工具函数：（主要用于为模块中的其他函数提供输入）
 1.count（）[类似range（）]
+        range()产生有限的数字而count（）从开始点产生无限数字序列。增长的步长可以通过可选参数 stepsize 控制。
+
     >>> import itertools as it
     >>> for n in it.count(15,2) :
     ...     if n<50 : print(n,end=' ')
