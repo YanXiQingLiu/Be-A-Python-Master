@@ -1,0 +1,96 @@
+
+
+>>> y
+'当前日期: 2017/06/23 周五 \n输入新日期: (年月日) '
+
+>>> f=open(r'G:\test.txt','w+')   #写入方式新建文件
+>>> print(t,file=f)
+>>> print(y,file=f)
+>>> f.close()
+>>> print(t)
+ 驱动器 C 中的卷是 SSD_本地磁盘
+ 卷的序列号是 000E-A003
+ C:\Users\Administrator 的目录
+2017/06/23  10:08    <DIR>          .
+2017/06/23  10:08    <DIR>          ..
+2016/10/09  14:14    <DIR>          .android
+2017/06/22  12:17             4,100 .bash_history
+2017/01/08  12:29    <DIR>          .eclipse
+2017/06/23  10:08               363 .gitconfig
+2017/04/15  10:08    <DIR>          .idlerc
+2017/06/22  20:28    <DIR>          .IntelliJIdea2017.1
+
+
+----------------------------------------G:\test.txt--------------------------------------------------------
+ 驱动器 C 中的卷是 SSD_本地磁盘
+ 卷的序列号是 000E-A003
+
+ C:\Users\Administrator 的目录
+
+2017/06/23  10:08    <DIR>          .
+2017/06/23  10:08    <DIR>          ..
+2016/10/09  14:14    <DIR>          .android
+2017/06/22  12:17             4,100 .bash_history
+2017/01/08  12:29    <DIR>          .eclipse
+2017/06/23  10:08               363 .gitconfig
+2017/04/15  10:08    <DIR>          .idlerc
+2017/06/22  20:28    <DIR>          .IntelliJIdea2017.1
+2017/06/04  22:42               223 .minttyrc
+2017/01/12  16:34    <DIR>          .p2
+2017/04/20  15:09    <DIR>          .PyCharmCE2017.1
+2017/06/21  11:15    <DIR>          .ssh
+2017/06/04  21:09    <DIR>          .vim
+2017/06/05  17:09            33,260 .viminfo
+2017/05/09  10:46    <DIR>          .VirtualBox
+2014/03/04  18:14             1,028 11html.py
+2017/05/05  16:30               344 age.py
+2016/10/26  11:36                99 CacheConfig.properties
+2017/05/07  21:33               154 chongdingxiang.txt
+2017/05/15  13:52    <DIR>          Contacts
+2017/06/03  16:54                10 data.bin
+2017/06/03  14:49                44 datafiletest.txt
+2017/06/23  08:28    <DIR>          Desktop
+2017/06/13  11:28    <DIR>          Documents
+2017/06/22  20:46    <DIR>          Downloads
+2017/04/26  16:16    <DIR>          Dszx
+2017/06/15  14:53    <DIR>          Favorites
+2017/06/19  11:18                37 fundata.shelve.bak
+2017/06/19  11:17               557 fundata.shelve.dat
+2017/06/19  11:18                37 fundata.shelve.dir
+2017/04/17  18:34    <DIR>          HelloWorld
+2017/05/05  17:27               865 if.py
+2017/05/24  13:16             2,804 isql.eas
+2017/05/05  11:47               280 jiaohu-try.py
+2017/05/05  16:18               526 jiaohu.py
+2017/05/06  17:00             4,921 l.py
+2017/04/28  14:17             3,697 learning.py
+2014/06/04  15:30               932 lendydata.py
+2017/05/15  13:52    <DIR>          Links
+2017/05/30  10:43               446 ls.txt
+2017/05/15  13:52    <DIR>          Music
+2016/09/29  22:55    <DIR>          OneDrive
+2017/02/15  11:48    <DIR>          Oracle
+2017/05/15  13:52    <DIR>          Pictures
+2017/05/02  16:53    <DIR>          psutil
+2017/05/15  13:52    <DIR>          Saved Games
+2014/03/04  14:11             1,080 saxtoolhire.py
+2017/05/26  20:22    <DIR>          Searches
+2014/03/04  14:23             4,371 sheet001.htm
+2017/06/09  15:04               106 toolhire.ini
+2014/03/04  12:24             6,719 toolhire.xml
+2014/03/10  14:33               680 toolhireET1.py
+2014/03/11  15:59             1,186 toolhireET2.py
+2017/06/22  13:48             1,059 userconfig.xml
+2017/05/15  13:52    <DIR>          Videos
+2017/04/15  19:16    <DIR>          VirtualBox VMs
+2017/05/07  20:23                22 wode-diyige-chongdingxiang.txt
+2017/05/06  15:19                 0 xunhuan.py
+2017/06/20  10:57    <DIR>          __pycache__
+2017/04/10  16:24            10,240 递延台账.xls
+              31 个文件         80,190 字节
+              29 个目录 23,875,928,064 可用字节
+当前日期: 2017/06/23 周五 
+输入新日期: (年月日) 
+
+
+------------------------------------------------------------------------------------------------------------
