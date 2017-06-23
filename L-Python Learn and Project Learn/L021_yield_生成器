@@ -1,0 +1,25 @@
+定义函数：
+
+
+>>> def countdown(n):
+...     print('Counting down!')
+...     while n>0:
+...         yield n
+...         n -= 1
+...
+
+用过__next__连续调用：
+>>> c.__next__()
+Counting down!
+6
+>>> c.__next__()
+5
+>>> c.__next__()
+4
+>>> c.__next__()
+3
+>>> c.__next__()
+2
+>>> c.__next__()
+1
+>>> c.__next__()
