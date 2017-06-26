@@ -1,0 +1,6 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+程序中包含特殊的 coding: 注释语句时，可以直接使用支持 Unicode 的编辑器输入字符串字面量。
+但是 python 的其他元素（包括标识符名称和保留字） 还是只能使用 ASCII 字符。
