@@ -1,0 +1,25 @@
+ Python 中所有的保留字（32个）：
+    and    as    assert
+    break
+    class    continue
+    def    del
+    elif    else    except    exec
+    finally    for    from
+    global
+    if    import    in    is    
+    lambda
+    nonlocal    not
+    or
+    pass     print
+    raise    return
+    try
+    while    with
+    yield
+    
+    
+以下划线开始或结束的标识符通常具有特殊含义。
+    例如：
+    1.以一个下划线开始的标识符(如 _foo )不能使用 from module import * 语句导入。
+    2.前后均带有双下划线的标识符(如 __init__ )是为特殊方法保留的。
+    3.而只有前面带有双下划线的标识符(如 __bar )则用于实现私有的类成员。
+    4.一般用途的标识符应避免使用以上几种格式。
