@@ -1,0 +1,11 @@
+    Python 中的所有对象都享受着“头等”（first class） 待遇，称作第一类对象。
+    这意味着所有能用标识符命名的对象都具有平等的身份。
+    这还意味着所有能被命名的对象都可以当作数据处理。
+    例如下面给出了一个包含两个值的简单字典：
+
+>>> line="GOOD,100,490.10"
+>>> field_types = [str,int,float]
+>>> raw_fields = line.split(',')
+>>> fields = [ty(val) for ty,val in zip(field_types,raw_fields)]
+>>> fields
+['GOOD', 100, 490.1]
