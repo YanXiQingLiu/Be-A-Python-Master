@@ -1,3 +1,4 @@
+1.
 Python 中的所有对象都享受着“头等”（first class） 待遇，称作第一类对象。
     这意味着所有能用标识符命名的对象都具有平等的身份。
     这还意味着所有能被命名的对象都可以当作数据处理。
@@ -10,29 +11,29 @@ Python 中的所有对象都享受着“头等”（first class） 待遇，称�
         
 给这个字典添加一些特殊的项，便可看到对象的第一类本质，例如：
 
-        >>> items["func"] = abs
-        >>> import math
-        >>> items["mod"] = math
-        >>> items['error'] =ValueError
+        >>> items["func"] = abs    #添加abs()函数
+        >>> import math             
+        >>> items["mod"] = math    #添加一个模块
+        >>> items['error'] =ValueError    #添加一个异常类型
         >>> nums = [1,2,3,4]
-        >>> items['append'] = nums.append
+        >>> items['append'] = nums.append    #添加另一个对象的一个方法
         
 在这个例子中，items字典包含一个函数、一个模块、一个异常和另一个对象的一个方法。如果愿意，你可以使用 items 的字典查询代替
 原始名称，代码依然有效，例如：
 
-        >>> items['func'](-54)
+        >>> items['func'](-54)    #执行abs(-54)
         54
-        >>> items["mod"].sqrt(16)
+        >>> items["mod"].sqrt(16)    #执行math.sqrt(4)
         4.0
         >>> try:
         ...    x = int("a lot")
-        ... except items["error"] as e:
+        ... except items["error"] as e:    # e 等同于 except ValueError
         ...     print("Couldn't convert")
         ...
         Couldn't convert
         >>> nums
         [1, 2, 3, 4]
-        >>> items["append"](1000)
+        >>> items["append"](1000)    #执行 nums.append(1000)
         >>> nums
         [1, 2, 3, 4, 1000]
         
@@ -46,7 +47,19 @@ python 中的一切都是第一类的，新手一般不太能完全意识到这�
         >>> fields = [ty(val) for ty,val in zip(field_types,raw_fields)]
         >>> fields
         ['GOOD', 100, 490.1]
-
+2.
 扩展阅读：
 《如何正确理解Python函数是第一类对象》
 https://foofish.net/function-is-first-class-object.html
+
+
+
+
+3.
+----------------------------属于第一类对象的整理表----------------------------------------------
+    内置函数
+    模块
+    异常类型
+    另一个对象的一个方法
+
+-----------------------------------------------------------------------------------------------
