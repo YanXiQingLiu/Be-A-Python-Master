@@ -1,11 +1,47 @@
-    Python 中的所有对象都享受着“头等”（first class） 待遇，称作第一类对象。
+Python 中的所有对象都享受着“头等”（first class） 待遇，称作第一类对象。
     这意味着所有能用标识符命名的对象都具有平等的身份。
     这还意味着所有能被命名的对象都可以当作数据处理。
     例如下面给出了一个包含两个值的简单字典：
+    
+        >>> items = {
+        ...     'number' : 42,
+        ...     'text' : "Hello World"
+        ... }
+        
+给这个字典添加一些特殊的项，便可看到对象的第一类本质，例如：
+        >>> items["func"] = abs
+        >>> import math
+        >>> items["mod"] = math
+        >>> items['error'] =ValueError
+        >>> nums = [1,2,3,4]
+        >>> items['append'] = nums.append
+在这个例子中，items字典包含一个函数、一个模块、一个异常和另一个对象的一个方法。如果愿意，你可以使用 items 的字典查询代替
+原始名称，代码依然有效，例如：
+        >>> items['func'](-54)
+        54
+        >>> items["mod"].sqrt(16)
+        4.0
+        >>> try:
+        ...    x = int("a lot")
+        ... except items["error"] as e:
+        ...     print("Couldn't convert")
+        ...
+        Couldn't convert
+        >>> nums
+        [1, 2, 3, 4]
+        >>> items["append"](1000)
+        >>> nums
+        [1, 2, 3, 4, 1000]
+python 中的一切都是第一类的，新手一般不太能完全意识到这一点。但利用这个特性可以写出非常紧凑灵活的代码。例如，假定
+要通过正确的类型转换把一行文本 GOOD，100,490.10 转换为一个字段列表，聪明的做法是创建一个类型列表（类型属于第一类对象），
+然后执行一些简单的列表处理操作：
+        >>> line="GOOD,100,490.10"
+        >>> field_types = [str,int,float]
+        >>> raw_fields = line.split(',')
+        >>> fields = [ty(val) for ty,val in zip(field_types,raw_fields)]
+        >>> fields
+        ['GOOD', 100, 490.1]
 
->>> line="GOOD,100,490.10"
->>> field_types = [str,int,float]
->>> raw_fields = line.split(',')
->>> fields = [ty(val) for ty,val in zip(field_types,raw_fields)]
->>> fields
-['GOOD', 100, 490.1]
+扩展阅读：
+《如何正确理解Python函数是第一类对象》
+https://foofish.net/function-is-first-class-object.html
