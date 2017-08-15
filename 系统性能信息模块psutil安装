@@ -7,3 +7,42 @@ yum install gcc
 yum install python-devel
 python setup.py install
 yum install gcc libffi-devel.i686 openssl-devel
+
+
+
+——————————————————————————————————————————python 添加 tab 补全功能————————————————————————————————————————————
+
+
+    1 >>>python27
+    2 >>>import sys
+    3 >>>sys.path
+
+    4. 复制tab.py到Python调用库路径：/usr/local/python27/lib/python2.7
+#cat tab.py
+#!/usr/bin/env python
+# python startup file
+import sys
+import readline
+import rlcompleter
+import atexit
+import os
+# tab completion
+readline.parse_and_bind('tab: complete')
+# history file
+histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
+try:
+    readline.read_history_file(histfile)
+except IOError:
+    pass
+
+atexit.register(readline.write_history_file, histfile)
+del os, histfile, readline, rlcompleter
+
+
+    5 #echo "export PYTHONTAB=/usr/local/python27/lib/python2.7/tab.py" >>/etc/profile
+    6. #source /etc/profile
+
+
+    >>> import tab
+    >>> import sys
+    >>> sys.
