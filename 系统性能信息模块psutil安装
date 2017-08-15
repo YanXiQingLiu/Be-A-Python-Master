@@ -1,0 +1,9 @@
+
+wget https://pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gz --no-check-certificate
+tar -xzvf psutil-2.0.0.tar.gz 
+cd psutil-2.0.0/
+python setup.py install
+yum install gcc
+yum install python-devel
+python setup.py install
+yum install gcc libffi-devel.i686 openssl-devel
