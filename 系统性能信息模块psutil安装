@@ -46,3 +46,7 @@ del os, histfile, readline, rlcompleter
     >>> import tab
     >>> import sys
     >>> sys.
+    
+    
+    pip install pyreadline
+    pip install psutil
