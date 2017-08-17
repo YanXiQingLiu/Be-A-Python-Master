@@ -10,7 +10,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 pyinstaller --console --onefile  C:\Python27\2048\1048.py
-
+pyinstaller -F -c --icon="C:\Python27\2048\games.ico" C:\Python27\2048\ok.py
 
 
 
