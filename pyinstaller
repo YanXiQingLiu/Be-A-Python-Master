@@ -1,0 +1,49 @@
+pip install pyinstaller
+
+
+
+
+C:\Python27\2048>python
+Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:53:40) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+
+
+pyinstaller --console --onefile  C:\Python27\2048\1048.py
+
+------------------------------------------------------------------------------------------------
+-F,
+--onefile
+ Py代码只有一个文件
+ 
+-D
+--onedir
+ Py代码放在一个目录中（默认是这个）
+-K,
+--tk
+ 包含TCL/TK
+-d,
+--debug
+ 生成debug模式的exe文件
+-w,
+--windowed,
+--noconsole
+ 窗体exe文件(Windows Only)
+-c,
+--nowindowed,
+--console
+ 控制台exe文件(Windows Only)
+-X,
+--upx
+ 使用upx压缩exe文件
+-o
+DIR,
+--out=DIR 设置spec文件输出的目录，默认在PyInstaller同目录 
+--icon=<FILE.ICO>
+ 加入图标（Windows Only）
+-v
+FILE,
+--version=FILE 加入版本信息文件
+例如：
+ python pyinstaller.py -F F:/idea/python/com/xuzc/test.py
+------------------------------------------------------------------------------------------------------------------------
