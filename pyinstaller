@@ -11,6 +11,26 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 pyinstaller --console --onefile  C:\Python27\2048\1048.py
 
+
+
+
+# -*- coding:utf-8 -*-  
+os.popen("chcp 65001")
+raw_input("钟经理，你好！......请按Enter继续")
+raw_input("主人请下达命令：")
+raw_input("已收到，再见！")
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------------------------------------------------------------------
 -F,
 --onefile
